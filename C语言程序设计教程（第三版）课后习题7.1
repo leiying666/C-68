@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void is_prime(int a)
+{
+	int i;
+	for (i = 2; i * i <= a; i++)
+	{
+		if (a % i == 0)
+		{
+			break;
+		}
+	}
+	if (i * i > a)
+	{
+		printf("%d\n", a);
+	}
+}
+int main()
+{
+	int a,i;
+	scanf("%d", &a);
+	for (int i = 2; i <= a; i++)
+	{
+		is_prime(i);
+	}
+	return 0;
+}
